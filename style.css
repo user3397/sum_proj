@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0e0e0e;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 2rem;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+  z-index: 0;
+}
+
+.hero h1, .scroll-down {
+  z-index: 1;
+}
+
+
+.hero h1 {
+  font-size: 2rem;
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+.scroll-down {
+  margin-top: 2rem;
+  color: #bbb;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.options {
+  background: linear-gradient(to bottom, #121212, #1f2b3a, #2e4a5c);
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+
+
+.options button {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.options button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.options p {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  color: #f0f0f0;
+}
+
+
+.recommendations {
+  padding: 2rem;
+  background: #1f1f1f;
+  min-height: 200px;
+}
+
+.recommendations h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.recommendations .empty {
+  color: #888;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: #111;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.navbar .nav-links a:hover {
+  color: #00acee;
+}
+
+.hero {
+  padding-top: 80px;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 260px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 0.7rem;
+  position: absolute;
+  z-index: 10;
+  bottom: 125%; 
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
